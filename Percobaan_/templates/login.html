@@ -1,0 +1,21 @@
+<html>
+   <body>
+      <form action = "http://localhost:5000/login" method = "POST">
+         <p>Enter Name:</p>
+         <p><input type = "text" name = "nm" /></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>   
+
+      <hr>
+      <h3>Daftar Nama yang Sudah Tersimpan:</h3>
+      <ul>
+         {% if daftar_nama %}
+            {% for row in daftar_nama %}
+               <li>{{ row[0] }}</li>
+            {% endfor %}
+         {% else %}
+            <li>Belum ada nama yang tersimpan.</li>
+         {% endif %}
+      </ul>
+   </body>
+</html>
